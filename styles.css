@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap');
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    width: 400px;
+    font-family: 'Open Sans', sans-serif;
+    isolation: isolate;
+    overflow-x: hidden;
+}
+
+.container .step-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    position: relative;
+
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #e0e1e4;
+}
+
+.container .step-box span {
+    border-radius: 50%;
+    border: 5px solid #e0e1e4;
+    background-color: white;
+    width: 50px;
+    aspect-ratio: 1/1;
+    transition: .3s ease;
+
+    display: grid;
+    place-content: center;
+}
+
+.container .step-box span.active {
+    border-color: #5a84ee;
+    color: #5a84ee;
+}
+
+.container .step-box .indicator {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #e0e1e4;
+    z-index: -1;
+}
+
+.container .step-box .indicator .bar {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: #5a84ee;
+    transition: .3s ease;
+}
+
+.container .btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.container .btn-box button {
+    padding: .5rem 1rem;
+    background-color: #5a84ee;
+    border-radius: .3rem;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.container .btn-box button:hover {
+    opacity: .9;
+}
+
+.container .btn-box button:disabled {
+    cursor: not-allowed;
+    opacity: .7;
+}
